@@ -222,15 +222,20 @@
     <script type="text/javascript" charset="UTF-8" src="./index_files/UISuite.js"></script>
     
     <!-- genesys changes START -->
-    <script type="text/javascript" charset="UTF-8" src="./genesys_files/genesys-script.js"></script>
-    <script type="text/javascript" charset="UTF-8" src="./genesys_files/messenger-toggle.js"></script>
-    <script type="text/javascript" charset="UTF-8" src="./genesys_files/scripts.js"></script>
-
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/ghw.css" />
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <script src="https://apps.mypurecloud.com/genesys-bootstrap/genesys.min.js" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+        (function (g, e, n, es, ys) {
+          g['_genesysJs'] = e;
+          g[e] = g[e] || function () {
+            (g[e].q = g[e].q || []).push(arguments)
+          };
+          g[e].t = 1 * new Date();
+          g[e].c = es;
+          ys = document.createElement('script'); ys.async = 1; ys.src = n; ys.charset = 'utf-8'; document.head.appendChild(ys);
+        })(window, 'Genesys', 'https://apps.mypurecloud.com/genesys-bootstrap/genesys.min.js', {
+          environment: 'prod',
+          deploymentId: '14f29e5d-67f7-45c6-96b9-1d24a0601ce7'
+        });
+      </script>
     <!-- genesys changes END -->
 </head>
 
@@ -889,23 +894,7 @@
     <div id="hl-aria-live-alert-container" role="alert" aria-live="assertive" class="visually-hidden"></div>
     <script id="lpSS_25686111582" src="./index_files/storage.secure.min.js"></script>
 
-    <!-- Genesys Hackathon Widget -->
-		<div class="ghw-container">
-			<div class="share">
-				<div id="my_account" class="fab">
-					<span>My Account</span>
-				</div>
-				<div id="order_checks" class="fab">
-					<span>Order Checks</span>
-				</div>
-				<div id="dispute_charge" class="fab">
-					<span>Dispute Charge</span>
-				</div>
-			</div>
-
-			<div class="helper">Need help?</div>
-		</div>
-		<!-- END of GHW -->
+    
 </body>
 
 </html>
