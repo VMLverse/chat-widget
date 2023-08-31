@@ -220,19 +220,31 @@
     <script async="" id="lp-uw-embedded" src="./index_files/desktopEmbedded.js" charset="utf-8"></script>
     <script type="text/javascript" charset="UTF-8" src="./index_files/overlay.js"></script>
     <script type="text/javascript" charset="UTF-8" src="./index_files/UISuite.js"></script>
+   
+    <!-- Genesys HEAD Code Start -->
+
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/ghw.css" />
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <script type="text/javascript" charset="utf-8">
+
+        window.messenger_opened = false;
+
         (function (g, e, n, es, ys) {
-          g['_genesysJs'] = e;
-          g[e] = g[e] || function () {
-            (g[e].q = g[e].q || []).push(arguments)
-          };
-          g[e].t = 1 * new Date();
-          g[e].c = es;
-          ys = document.createElement('script'); ys.async = 1; ys.src = n; ys.charset = 'utf-8'; document.head.appendChild(ys);
+            g['_genesysJs'] = e;
+            g[e] = g[e] || function () {
+                (g[e].q = g[e].q || []).push(arguments)
+            };
+            g[e].t = 1 * new Date();
+            g[e].c = es;
+            ys = document.createElement('script'); ys.async = 1; ys.src = n; ys.charset = 'utf-8'; document.head.appendChild(ys);
         })(window, 'Genesys', 'https://apps.mypurecloud.com/genesys-bootstrap/genesys.min.js', {
-          environment: 'prod',
-          deploymentId: 'cc1d2e32-a104-4f03-8516-b180a5e85a0e'
+            environment: 'prod',
+            deploymentId: 'cc1d2e32-a104-4f03-8516-b180a5e85a0e'
         });
 
         Genesys("command", "Database.set", {
@@ -244,11 +256,53 @@
                 }
             }
         });
+
+        function toggleMessenger() {
+            if (window.messenger_opened == false) {
+                window.messenger_opened = true;
+                $('.helper').css({ "visibility": "hidden" }).removeClass('animate__tada animate__animated');
+                $('.share, .fab').removeClass('active');
+                Genesys("command", "Messenger.open");
+            } else {
+                window.messenger_opened = false;
+                Genesys("command", "Messenger.close");
+                focusHelper();
+            }
+        }
     </script>
+
+    <!-- Genesys HEAD Code END -->
 
 </head>
 
 <body>
+
+    <!-- Genesys BODY Start -->
+		<div class="ghw-container">
+			<div class="share">
+				<div id="my_account" class="fab">
+					<span>My Account</span>
+				</div>
+				<div id="order_checks" class="fab">
+					<span>Order Checks</span>
+				</div>
+				<div id="dispute_charge" class="fab">
+					<span>Dispute Charge</span>
+				</div>
+			</div>
+
+			<div class="helper">Need help?</div>
+		</div>
+		
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script  src="assets/js/scripts.js"></script>
+
+    <!-- Genesys BODY EnD -->
     <header class="bs4">
         <nav class="header-nav navbar navbar-expand-lg fixed-top"><a class="navbar-brand"
                 href="https://www.thorlabs.com/" title="Thorlabs Home"><img src="./index_files/Thorlabs_Logo_Red.png"
