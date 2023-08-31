@@ -1,18 +1,20 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Caffeinated Consultants | Genesys Hackathon 2022</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="assets/css/ghw.css" />
 
-		<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+<head>
+	<title>Caffeinated Consultants | Genesys Hackathon 2022</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="assets/css/ghw.css" />
 
-		<script type="text/javascript" charset="utf-8">
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js"
+		integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+	<script type="text/javascript" charset="utf-8">
 		window.messenger_opened = false;
-		
+
 		(function (g, e, n, es, ys) {
 			g['_genesysJs'] = e;
 			g[e] = g[e] || function () {
@@ -23,36 +25,38 @@
 			ys = document.createElement('script'); ys.async = 1; ys.src = n; ys.charset = 'utf-8'; document.head.appendChild(ys);
 		})(window, 'Genesys', 'https://apps.mypurecloud.com/genesys-bootstrap/genesys.min.js', {
 			environment: 'prod',
-    		deploymentId: 'cc1d2e32-a104-4f03-8516-b180a5e85a0e'
+			deploymentId: '42bc1228-9798-4a64-8151-ab39e7a34634'
 		});
-		</script>
+	</script>
 
-		<script type="text/javascript">
-		function toggleMessenger(){
-			if ( window.messenger_opened == false ) {
+	<script type="text/javascript">
+		function toggleMessenger() {
+			if (window.messenger_opened == false) {
 				window.messenger_opened = true;
-				$('.helper').css({ "visibility": "hidden" }).removeClass( 'animate__tada animate__animated' );
-				$('.share, .fab').removeClass( 'active' );
-				Genesys( "command", "Messenger.open" );
+				$('.helper').css({ "visibility": "hidden" }).removeClass('animate__tada animate__animated');
+				$('.share, .fab').removeClass('active');
+				Genesys("command", "Messenger.open");
 			} else {
 				window.messenger_opened = false;
-				Genesys( "command", "Messenger.close" );
+				Genesys("command", "Messenger.close");
 				focusHelper();
 			}
 		}
-		</script>
-	</head>
-	<body class="homepage is-preload">
-		<div id="page-wrapper">
+	</script>
+</head>
 
-			<!-- Header -->
-				<section id="header">
+<body class="homepage is-preload">
+	<div id="page-wrapper">
 
-					<!-- Logo -->
-						<h1><a href="index.html"><img src="images/icon_caffeinated-consultants.png" height="60px" style="margin-right: 20px;" />Caffeinated Consultants</a></h1>
+		<!-- Header -->
+		<section id="header">
 
-					<!-- Nav -->
-					<!--
+			<!-- Logo -->
+			<h1><a href="index.html"><img src="images/icon_caffeinated-consultants.png" height="60px"
+						style="margin-right: 20px;" />Caffeinated Consultants</a></h1>
+
+			<!-- Nav -->
+			<!--
 						<nav id="nav">
 							<ul>
 								<li class="current"><a href="index.html">Home</a></li>
@@ -82,203 +86,237 @@
 						</nav>
 					-->
 
-					<!-- Banner -->
-						<section id="banner">
-							<header>
-								<h2>Howdy. We are the Caffeinated Consulants.</h2>
-								<p>Solving our customers' problems, one coffee bean at a time.</p>
-							</header>
-						</section>
+			<!-- Banner -->
+			<section id="banner">
+				<header>
+					<h2>Howdy. We are the Caffeinated Consulants.</h2>
+					<p>Solving our customers' problems, one coffee bean at a time.</p>
+				</header>
+			</section>
 
-					<!-- Intro -->
-						<section id="intro" class="container">
-							<header class="major" style="margin: 3em 0 1em 0;">
-								<h2>Messenger - Floating Quick Replies</h2>
+			<!-- Intro -->
+			<section id="intro" class="container">
+				<header class="major" style="margin: 3em 0 1em 0;">
+					<h2>Messenger - Floating Quick Replies</h2>
+				</header>
+				<div class="row">
+					<div class="col-4 col-12-medium">
+						<section class="first">
+							<i class="icon solid featured fa-cog"></i>
+							<header>
+								<h2>The Goal</h2>
+							</header>
+							<p>Drive more conversation starts by displaying floating Quick Replies outside of Messenger
+								thereby enticing the customer to being a conversation.</p>
+						</section>
+					</div>
+					<div class="col-4 col-12-medium">
+						<section class="middle">
+							<i class="icon solid featured alt fa-bolt"></i>
+							<header>
+								<h2>Current State</h2>
+							</header>
+							<p>Messenger has Conversation Auto-Start in Beta and releasing GA on September 14th. When
+								Auto-Start is enabled, as soon as Messenger is opened, a "Customer Joined" event is sent
+								behind the scenes triggering the inbound message flow. Most commonly, the first action
+								in the flow is a bot reply of some sort.</p>
+						</section>
+					</div>
+					<div class="col-4 col-12-medium">
+						<section class="last">
+							<i class="icon solid featured alt2 fa-star"></i>
+							<header>
+								<h2>The Idea</h2>
+							</header>
+							<p>HWW display the initial question + Quick Reply buttons of the bot flow outside of
+								Messenger before the user has opened Messenger? By "starting" the conversation outside
+								of Messenger, customers may be more likely to start the conversation when they otherwise
+								may not have.</p>
+						</section>
+					</div>
+				</div>
+			</section>
+		</section>
+
+		<!-- Main -->
+		<section id="main">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+
+						<!-- Blog -->
+						<section class="blog">
+							<header class="major">
+								<h2>The Solution</h2>
 							</header>
 							<div class="row">
-								<div class="col-4 col-12-medium">
-									<section class="first">
-										<i class="icon solid featured fa-cog"></i>
+								<div class="col-6 col-12-small">
+									<section class="box">
+										<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
 										<header>
-											<h2>The Goal</h2>
+											<h3>The Solution</h3>
 										</header>
-										<p>Drive more conversation starts by displaying floating Quick Replies outside of Messenger thereby enticing the customer to being a conversation.</p>
+										<p>We decided to create floating quick-replies that keep to the Genesys branding
+											and theme &nbsp; with an addition of a few new ideas.</p>
+										<p>
+										<ol>
+											<li>
+												A <strong>"Need Help?"</strong> banner that grabs the user's attention
+												with visual effects:
+												<ul>
+													<li>It loads after 5 seconds on the page.</li>
+													<li>Stays unobtrusive and out of the way of website content.</li>
+													<li>Reminds the user that chat is an option by moving occasionally.
+													</li>
+												</ul>
+											</li>
+											<li>
+												A click event handler on the widget button that slides out quick-reply
+												buttons to help navigate directly to the bot intent:
+												<ul>
+													<li>These appear when you click on the widget.</li>
+													<li>They have a slightly different visual theme to promote
+														awareness.</li>
+													<li>They stay unobtrusive and slide away when the user moves the
+														mouse away from the widget.</li>
+												</ul>
+											</li>
+											<li>
+												Regular functionality of the widget is not changed:
+												<ul>
+													<li>You can still enable a conversation that does not jump ahead to
+														a specific intent.</li>
+													<li>Participant data is still appended to the interaction so
+														downstream reporting understands what the customer was looking
+														for.</li>
+													<li>All but help functions are still present.</li>
+												</ul>
+											</li>
+										</ol>
 									</section>
 								</div>
-								<div class="col-4 col-12-medium">
-									<section class="middle">
-										<i class="icon solid featured alt fa-bolt"></i>
+								<div class="col-6 col-12-small">
+									<section class="box">
+										<a href="#" class="image featured"><img src="images/pic09.jpg" alt="" /></a>
 										<header>
-											<h2>Current State</h2>
+											<h3>Day 2 Options</h3>
 										</header>
-										<p>Messenger has Conversation Auto-Start in Beta and releasing GA on September 14th. When Auto-Start is enabled, as soon as Messenger is opened, a "Customer Joined" event is sent behind the scenes triggering the inbound message flow. Most commonly, the first action in the flow is a bot reply of some sort.</p>
-									</section>
-								</div>
-								<div class="col-4 col-12-medium">
-									<section class="last">
-										<i class="icon solid featured alt2 fa-star"></i>
-										<header>
-											<h2>The Idea</h2>
-										</header>
-										<p>HWW display the initial question + Quick Reply buttons of the bot flow outside of Messenger before the user has opened Messenger? By "starting" the conversation outside of Messenger, customers may be more likely to start the conversation when they otherwise may not have.</p>
+										<p>This idea is just the beginning. Our code is highly customizable and
+											extensible and could be added to the current Genesys widget with minimal
+											effort. With the collaboration of <strong>Product Engineering</strong>,
+											creating floating quick-replies could be enhanced for the customer in the
+											following areas.</p>
+										<p>
+										<ul>
+											<li><strong>Custom Blueprint</strong> created to walk customers through
+												setting up this functionality today.</li>
+											<li>Enable certain <strong>intents</strong> to be floating
+												<strong>quick-replies</strong> via the bot flow.</li>
+											<li><strong>Quick Configurable Settings</strong> in the Admin Panel for
+												changing the "Need Help?" text, moving effects, and other aspects of the
+												plugin.</li>
+											<li>Floating Quick Replies could launch other features like
+												<strong>callback</strong>, <strong>co-browse</strong>,
+												<strong>authenticated sessions</strong>, and other customizable actions.
+											</li>
+										</ul>
+										</p>
+										<p>With our version of floating quick replies, the sky is the limit. We hope
+											customers will take the idea and run with it to create new and exciting ways
+											of interacting with the Genesys platform.</p>
 									</section>
 								</div>
 							</div>
 						</section>
-				</section>
 
-			<!-- Main -->
-				<section id="main">
-					<div class="container">
-						<div class="row">
-							<div class="col-12">
-
-								<!-- Blog -->
-									<section class="blog">
-										<header class="major">
-											<h2>The Solution</h2>
-										</header>
-										<div class="row">
-											<div class="col-6 col-12-small">
-												<section class="box">
-													<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
-													<header>
-														<h3>The Solution</h3>
-													</header>
-													<p>We decided to create floating quick-replies that keep to the Genesys branding and theme &nbsp; with an addition of a few new ideas.</p>
-													<p>
-														<ol>
-															<li>
-																A <strong>"Need Help?"</strong> banner that grabs the user's attention with visual effects:
-																<ul>
-																	<li>It loads after 5 seconds on the page.</li>
-																	<li>Stays unobtrusive and out of the way of website content.</li>
-																	<li>Reminds the user that chat is an option by moving occasionally.</li>
-																</ul>
-															</li>
-															<li>
-																A click event handler on the widget button that slides out quick-reply buttons to help navigate directly to the bot intent:
-																<ul>
-																	<li>These appear when you click on the widget.</li>
-																	<li>They have a slightly different visual theme to promote awareness.</li>
-																	<li>They stay unobtrusive and slide away when the user moves the mouse away from the widget.</li>
-																</ul>
-															</li>
-															<li>
-																Regular functionality of the widget is not changed:
-																<ul>
-																	<li>You can still enable a conversation that does not jump ahead to a specific intent.</li>
-																	<li>Participant data is still appended to the interaction so downstream reporting understands what the customer was looking for.</li>
-																	<li>All but help functions are still present.</li>
-																</ul>
-															</li>
-														</ol>
-												</section>
-											</div>
-											<div class="col-6 col-12-small">
-												<section class="box">
-													<a href="#" class="image featured"><img src="images/pic09.jpg" alt="" /></a>
-													<header>
-														<h3>Day 2 Options</h3>
-													</header>
-													<p>This idea is just the beginning. Our code is highly customizable and extensible and could be added to the current Genesys widget with minimal effort. With the collaboration of <strong>Product Engineering</strong>, creating floating quick-replies could be enhanced for the customer in the following areas.</p>
-													<p>
-														<ul>
-															<li><strong>Custom Blueprint</strong> created to walk customers through setting up this functionality today.</li>
-															<li>Enable certain <strong>intents</strong> to be floating <strong>quick-replies</strong> via the bot flow.</li>
-															<li><strong>Quick Configurable Settings</strong> in the Admin Panel for changing the "Need Help?" text, moving effects, and other aspects of the plugin.</li>
-															<li>Floating Quick Replies could launch other features like <strong>callback</strong>, <strong>co-browse</strong>, <strong>authenticated sessions</strong>, and other customizable actions.</li>
-														</ul>
-													</p>
-													<p>With our version of floating quick replies, the sky is the limit. We hope customers will take the idea and run with it to create new and exciting ways of interacting with the Genesys platform.</p>
-												</section>
-											</div>
-										</div>
-									</section>
-
-							</div>
-
-							<div class="col-12">
-
-								<!-- Portfolio -->
-									<section>
-										<header class="major">
-											<h2>The Caffeinated Consultants</h2>
-										</header>
-										<div class="row">
-											<div class="col-4 col-6-medium col-12-small">
-												<section class="box">
-													<a href="#" class="image featured"><img src="images/team/nicholas-smith.png" alt="" /></a>
-													<header>
-														<h3>Nicholas Smith</h3>
-													</header>
-													<p>
-														<strong>Manager &ndash; NA Digital</strong><br />
-														<em>Team Captain & Back-End Dev</em>
-													</p>
-												</section>
-											</div>
-											<div class="col-4 col-6-medium col-12-small">
-												<section class="box">
-													<a href="#" class="image featured"><img src="images/team/erwin-merioles.png" alt="" /></a>
-													<header>
-														<h3>Erwin Merioles</h3>
-													</header>
-													<p>
-														<strong>Manager &ndash; Manila COE</strong><br />
-														<em>Co-Captain & Front-End Dev</em>
-													</p>
-												</section>
-											</div>
-											<div class="col-4 col-6-medium col-12-small">
-												<section class="box">
-													<a href="#" class="image featured"><img src="images/team/ryan-hale.png" alt="" /></a>
-													<header>
-														<h3>Ryan Hale</h3>
-													</header>
-													<p>
-														<strong>Principal Consultant &ndash; NA Digital</strong><br />
-														<em>Back-End Dev</em>
-													</p>
-												</section>
-											</div>
-											<div class="col-4 col-6-medium col-12-small">
-												<section class="box">
-													<a href="#" class="image featured"><img src="images/team/tijuan-brown.png" alt="" /></a>
-													<header>
-														<h3>Tijuan Brown</h3>
-													</header>
-													<p>
-														<strong>PS Consultant &ndash; NA Genesys Cloud Core</strong><br />
-														<em>Front-End Dev</em>
-													</p>
-												</section>
-											</div>
-											<div class="col-4 col-6-medium col-12-small">
-												<section class="box">
-													<a href="#" class="image featured"><img src="images/team/jean-dulay.png" alt="" /></a>
-													<header>
-														<h3>Jean Dulay</h3>
-													</header>
-													<p>
-														<strong>PS Consultant &ndash; Manila COE</strong><br />
-														<em>Front-End Dev</em>
-													</p>
-												</section>
-											</div>
-										</div>
-									</section>
-
-							</div>
-						</div>
 					</div>
-				</section>
 
-			<!-- Footer -->
-				<section id="footer" style="padding: 0;"">
-					<div class="container">
-						<div class="row">
-							<!--
+					<div class="col-12">
+
+						<!-- Portfolio -->
+						<section>
+							<header class="major">
+								<h2>The Caffeinated Consultants</h2>
+							</header>
+							<div class="row">
+								<div class="col-4 col-6-medium col-12-small">
+									<section class="box">
+										<a href="#" class="image featured"><img src="images/team/nicholas-smith.png"
+												alt="" /></a>
+										<header>
+											<h3>Nicholas Smith</h3>
+										</header>
+										<p>
+											<strong>Manager &ndash; NA Digital</strong><br />
+											<em>Team Captain & Back-End Dev</em>
+										</p>
+									</section>
+								</div>
+								<div class="col-4 col-6-medium col-12-small">
+									<section class="box">
+										<a href="#" class="image featured"><img src="images/team/erwin-merioles.png"
+												alt="" /></a>
+										<header>
+											<h3>Erwin Merioles</h3>
+										</header>
+										<p>
+											<strong>Manager &ndash; Manila COE</strong><br />
+											<em>Co-Captain & Front-End Dev</em>
+										</p>
+									</section>
+								</div>
+								<div class="col-4 col-6-medium col-12-small">
+									<section class="box">
+										<a href="#" class="image featured"><img src="images/team/ryan-hale.png"
+												alt="" /></a>
+										<header>
+											<h3>Ryan Hale</h3>
+										</header>
+										<p>
+											<strong>Principal Consultant &ndash; NA Digital</strong><br />
+											<em>Back-End Dev</em>
+										</p>
+									</section>
+								</div>
+								<div class="col-4 col-6-medium col-12-small">
+									<section class="box">
+										<a href="#" class="image featured"><img src="images/team/tijuan-brown.png"
+												alt="" /></a>
+										<header>
+											<h3>Tijuan Brown</h3>
+										</header>
+										<p>
+											<strong>PS Consultant &ndash; NA Genesys Cloud Core</strong><br />
+											<em>Front-End Dev</em>
+										</p>
+									</section>
+								</div>
+								<div class="col-4 col-6-medium col-12-small">
+									<section class="box">
+										<a href="#" class="image featured"><img src="images/team/jean-dulay.png"
+												alt="" /></a>
+										<header>
+											<h3>Jean Dulay</h3>
+										</header>
+										<p>
+											<strong>PS Consultant &ndash; Manila COE</strong><br />
+											<em>Front-End Dev</em>
+										</p>
+									</section>
+								</div>
+							</div>
+						</section>
+
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<section id="footer" style="padding: 0;"">
+					<div class=" container">
+			<div class="row">
+				<!--
 							<div class="col-8 col-12-medium">
 								<section>
 									<header>
@@ -395,44 +433,46 @@
 							</div>
 						-->
 
-							<div class="col-12">
-								<!-- Copyright -->
-								<div id="copyright">
-									<ul class="links">
-										<li>Copyright &copy; 2022. All rights reserved.</li><li>Genesys Caffeinated Consultants.</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
+				<div class="col-12">
+					<!-- Copyright -->
+					<div id="copyright">
+						<ul class="links">
+							<li>Copyright &copy; 2022. All rights reserved.</li>
+							<li>Genesys Caffeinated Consultants.</a></li>
+						</ul>
 					</div>
-				</section>
-		</div>
-
-		<!-- Genesys Hackathon Widget -->
-		<div class="ghw-container">
-			<div class="share">
-				<div id="my_account" class="fab">
-					<span>My Account</span>
-				</div>
-				<div id="order_checks" class="fab">
-					<span>Order Checks</span>
-				</div>
-				<div id="dispute_charge" class="fab">
-					<span>Dispute Charge</span>
 				</div>
 			</div>
+	</div>
+	</section>
+	</div>
 
-			<div class="helper">Need help?</div>
+	<!-- Genesys Hackathon Widget -->
+	<div class="ghw-container">
+		<div class="share">
+			<div id="my_account" class="fab">
+				<span>My Account</span>
+			</div>
+			<div id="order_checks" class="fab">
+				<span>Order Checks</span>
+			</div>
+			<div id="dispute_charge" class="fab">
+				<span>Dispute Charge</span>
+			</div>
 		</div>
-		<!-- END of GHW -->
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script  src="assets/js/scripts.js"></script>
-	</body>
+		<div class="helper">Need help?</div>
+	</div>
+	<!-- END of GHW -->
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.dropotron.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/scripts.js"></script>
+</body>
+
 </html>
