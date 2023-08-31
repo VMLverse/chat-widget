@@ -223,6 +223,8 @@
     
     <!-- genesys changes START -->
     <script type="text/javascript" charset="utf-8">
+        window.messenger_opened = false;
+
         (function (g, e, n, es, ys) {
           g['_genesysJs'] = e;
           g[e] = g[e] || function () {
@@ -236,6 +238,27 @@
           deploymentId: '14f29e5d-67f7-45c6-96b9-1d24a0601ce7'
         });
       </script>
+
+<script type="text/javascript">
+    function toggleMessenger(){
+        if ( window.messenger_opened == false ) {
+            window.messenger_opened = true;
+            $('.helper').css({ "visibility": "hidden" }).removeClass( 'animate__tada animate__animated' );
+            $('.share, .fab').removeClass( 'active' );
+            Genesys( "command", "Messenger.open" );
+        } else {
+            window.messenger_opened = false;
+            Genesys( "command", "Messenger.close" );
+            focusHelper();
+        }
+    }
+    </script>
+
+<link rel="stylesheet" href="assets/css/main.css" />
+<link rel="stylesheet" href="assets/css/ghw.css" />
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!-- genesys changes END -->
 </head>
 
@@ -893,6 +916,24 @@
     <div id="hl-aria-live-message-container" aria-live="polite" class="visually-hidden"></div>
     <div id="hl-aria-live-alert-container" role="alert" aria-live="assertive" class="visually-hidden"></div>
     <script id="lpSS_25686111582" src="./index_files/storage.secure.min.js"></script>
+
+    <!-- Genesys Hackathon Widget -->
+		<div class="ghw-container">
+			<div class="share">
+				<div id="my_account" class="fab">
+					<span>My Account</span>
+				</div>
+				<div id="order_checks" class="fab">
+					<span>Order Checks</span>
+				</div>
+				<div id="dispute_charge" class="fab">
+					<span>Dispute Charge</span>
+				</div>
+			</div>
+
+			<div class="helper">Need help?</div>
+		</div>
+		<!-- END of GHW -->
 
     
 </body>
