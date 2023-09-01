@@ -91,14 +91,6 @@ $(document).ready( function() {
 	$('#Q3_RMAReturns').click( function() {
 		openTopic( "Q3_RMAReturns" );
 	});
-
-	$('#Q4_OEMDivision').click( function() {
-		openTopic( "Q4_OEMDivision" );
-	});
-
-	$('#Q5_SolutionAdmins').click( function() {
-		openTopic( "Q5_SolutionAdmins" );
-	});
 	
 	/** Genesys Events **/
 	Genesys( "subscribe", "Messenger.closed", function( e ) {
