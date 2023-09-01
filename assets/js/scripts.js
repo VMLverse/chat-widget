@@ -80,16 +80,24 @@ $(document).ready( function() {
 	
 	focusHelper();
 	
-	$('#my_account').click( function() {
-		openTopic( "my_account" );
+	$('#Q1_TechSupport').click( function() {
+		openTopic( "Q1_TechSupport" );
 	});
 	
-	$('#order_checks').click( function() {
-		openTopic( "order_checks" );
+	$('#Q2_CallCenter').click( function() {
+		openTopic( "Q2_CallCenter" );
 	});
 	
-	$('#dispute_charge').click( function() {
-		openTopic( "dispute_charge" );
+	$('#Q3_RMAReturns').click( function() {
+		openTopic( "Q3_RMAReturns" );
+	});
+
+	$('#Q4_OEMDivision').click( function() {
+		openTopic( "Q4_OEMDivision" );
+	});
+
+	$('#Q5_SolutionAdmins').click( function() {
+		openTopic( "Q5_SolutionAdmins" );
 	});
 	
 	/** Genesys Events **/
